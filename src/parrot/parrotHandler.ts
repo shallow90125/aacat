@@ -8,15 +8,15 @@ import { selectColor } from './selectColor'
 import { streamText } from 'hono/streaming'
 
 /**
- * 1 フレームあたりの表示時間 (ミリ秒)。parrot.live 本家と同じ 70ms。
+ * Time each frame is shown for, in milliseconds. Matches parrot.live.
  */
 const FRAME_INTERVAL_MS = 70
 
 /**
- * /parrot エンドポイントの Hono ハンドラ。
- * curl 系クライアントには ASCII パロットアニメーションをストリーミングし、
- * それ以外には parrot.live と同様にオリジナルリポジトリへリダイレクトする。
- * `?flip=true` 指定時は文字列を反転したフレームを使う。
+ * Hono handler for the `/parrot` endpoint.
+ * curl-style clients receive a streaming ASCII parrot animation; other clients
+ * are redirected to this repository. When `?flip=true` is supplied the frames
+ * are mirrored.
  */
 export function parrotHandler(c: Context) {
 	const userAgent = c.req.header('user-agent') ?? null

@@ -1,7 +1,6 @@
 /**
- * parrot.live で使用される ANSI 256 色のうちのカラーパレット。
- * 各キーは色名で、値は前景色を設定する ANSI エスケープシーケンスのプレフィックス。
- * 出典: https://github.com/Marak/colors.js
+ * ANSI foreground color palette used by the parrot stream.
+ * Each value is the SGR escape sequence that switches on the named color.
  */
 export const ANSI_COLORS = {
 	blue: '\x1b[34m',
@@ -26,13 +25,13 @@ export const COLOR_NAMES: readonly ParrotColor[] = [
 ]
 
 /**
- * ANSI 前景色をリセットするエスケープシーケンス。
+ * SGR sequence that resets all attributes including the foreground color.
  */
 export const ANSI_RESET = '\x1b[0m'
 
 /**
- * ターミナル画面をクリアしてカーソルを左上に戻すエスケープシーケンス。
- * `\x1b[2J` で表示中の領域を消去、`\x1b[3J` でスクロールバックバッファも消去、
- * `\x1b[H` でカーソルを home position (1,1) に移動する。
+ * Escape sequence that clears the visible screen (`\x1b[2J`), wipes the
+ * scrollback buffer (`\x1b[3J`) and moves the cursor to the home position
+ * (`\x1b[H`). Emitted before each frame so the animation plays in place.
  */
 export const CLEAR_SCREEN = '\x1b[2J\x1b[3J\x1b[H'

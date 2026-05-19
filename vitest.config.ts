@@ -2,11 +2,12 @@ import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
 	define: {
-		// 本番ビルド時 (wrangler) では `import.meta.vitest` が undefined になり、関連コードが tree-shake される。
+		// In a production build (wrangler) `import.meta.vitest` becomes `undefined`
+		// so the inline tests are tree-shaken out of the worker bundle.
 		'import.meta.vitest': 'undefined',
 	},
 	test: {
-		// 各実装ファイル内の `if (import.meta.vitest)` ブロックをテストとして拾う in-source testing 設定。
+		// Enables in-source testing: each `if (import.meta.vitest)` block in src/ is collected as tests.
 		includeSource: ['src/**/*.ts'],
 	},
 })

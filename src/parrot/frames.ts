@@ -1,6 +1,6 @@
 /**
- * パロットアニメーションのフレーム配列。
- * 出典: https://github.com/jmhobbs/terminal-parrot/blob/main/animations/parrot.animation
+ * Frames of the parrot animation.
+ * Source: https://github.com/jmhobbs/terminal-parrot/blob/main/animations/parrot.animation
  */
 export const FRAMES: readonly string[] = [
 	"                        .cccc;;cc;';c.\n                      .,:dkdc:;;:c:,:d:.\n                     .loc'.,cc::::::,..,:.\n                   .cl;....;dkdccc::,...c;\n                  .c:,';:'..ckc',;::;....;c.\n                .c:'.,dkkoc:ok:;llllc,,c,';:.\n               .;c,';okkkkkkkk:,lllll,:kd;.;:,.\n               co..:kkkkkkkkkk:;llllc':kkc..oNc\n             .cl;.,okkkkkkkkkkc,:cll;,okkc'.cO;\n             ;k:..ckkkkkkkkkkkl..,;,.;xkko:',l'\n            .,...';dkkkkkkkkkkd;.....ckkkl'.cO;\n         .,,:,.;oo:ckkkkkkkkkkkdoc;;cdkkkc..cd,\n      .cclo;,ccdkkl;llccdkkkkkkkkkkkkkkkd,.c;\n     .lol:;;okkkkkxooc::loodkkkkkkkkkkkko'.oc\n   .c:'..lkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkd,.oc\n  .lo;,ccdkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkd,.c;\n,dx:..;lllllllllllllllllllllllllllllllloc'...\ncNO;........................................\n",

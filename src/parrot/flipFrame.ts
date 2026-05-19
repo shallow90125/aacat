@@ -1,10 +1,10 @@
 /**
- * フレーム文字列を文字単位で反転する。
- * `?flip=true` クエリで鏡像のパロットを表示するために使う。
- * parrot.live と挙動を揃えるため、行単位ではなく文字列全体を反転する。
+ * Reverse the entire frame string, character by character.
+ * Used when `?flip=true` is supplied to serve a mirrored parrot.
+ * Matches parrot.live's behavior of reversing the whole string instead of each line.
  *
- * @param frame 反転対象のフレーム文字列
- * @returns 文字単位で反転したフレーム文字列
+ * @param frame the frame string to reverse
+ * @returns the character-reversed frame string
  */
 export function flipFrame(frame: string): string {
 	return frame.split('').reverse().join('')
@@ -14,15 +14,15 @@ if (import.meta.vitest) {
 	const { describe, it, expect } = import.meta.vitest
 
 	describe('flipFrame', () => {
-		it('文字列を文字単位で反転する', () => {
+		it('reverses the string character by character', () => {
 			expect(flipFrame('abc')).toBe('cba')
 		})
 
-		it('空文字列は空文字列を返す', () => {
+		it('returns an empty string for an empty input', () => {
 			expect(flipFrame('')).toBe('')
 		})
 
-		it('改行も含めて反転される', () => {
+		it('reverses across newlines as well', () => {
 			expect(flipFrame('ab\ncd')).toBe('dc\nba')
 		})
 	})
