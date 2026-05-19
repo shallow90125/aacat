@@ -1,21 +1,11 @@
-```txt
-npm install
-npm run dev
+# aacat
+
+A streaming ASCII parrot, inspired by [parrot.live](https://github.com/hugomd/parrot.live).
+
+```sh
+curl https://<your-worker-domain>/parrot
 ```
 
-```txt
-npm run deploy
-```
+Add `?flip=true` for a mirrored parrot.
 
-[For generating/synchronizing types based on your Worker configuration run](https://developers.cloudflare.com/workers/wrangler/commands/#types):
-
-```txt
-npm run cf-typegen
-```
-
-Pass the `CloudflareBindings` as generics when instantiation `Hono`:
-
-```ts
-// src/index.ts
-const app = new Hono<{ Bindings: CloudflareBindings }>()
-```
+Frames are taken from [jmhobbs/terminal-parrot](https://github.com/jmhobbs/terminal-parrot).

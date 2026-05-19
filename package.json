@@ -9,6 +9,7 @@
 		"lint:fix": "oxlint --fix",
 		"fmt": "oxfmt",
 		"fmt:check": "oxfmt --check",
+		"test": "vitest run",
 		"prepare": "husky || true"
 	},
 	"dependencies": {
@@ -20,6 +21,7 @@
 		"oxfmt": "^0.50.0",
 		"oxlint": "^1.65.0",
 		"oxlint-tsgolint": "^0.23.0",
+		"vitest": "^4.1.6",
 		"wrangler": "^4.4.0"
 	},
 	"lint-staged": {
