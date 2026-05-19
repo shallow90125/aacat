@@ -23,7 +23,7 @@
 		"wrangler": "^4.4.0"
 	},
 	"lint-staged": {
-		"*": [
+		"*.{js,ts}": [
 			"bun run lint:fix",
 			"bun run fmt"
 		]
