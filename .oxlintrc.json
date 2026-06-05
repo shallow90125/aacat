@@ -5,7 +5,7 @@
 		"correctness": "error"
 	},
 	"rules": {
-		"sort-imports": "error",
+		"sort-imports": ["error", { "ignoreDeclarationSort": true }],
 		"sort-keys": "error",
 		"sort-vars": "error"
 	},

@@ -1,5 +1,5 @@
-import { CLEAR_SCREEN, type ParrotColor } from './colors'
 import { colorize } from './colorize'
+import { CLEAR_SCREEN, type ParrotColor } from './colors'
 
 /**
  * Build the output for a single frame: the screen-clear sequence followed by

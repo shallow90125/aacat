@@ -3,6 +3,7 @@
 	"ignorePatterns": [],
 	"semi": false,
 	"singleQuote": true,
+	"sortImports": true,
 	"trailingComma": "all",
 	"useTabs": true
 }

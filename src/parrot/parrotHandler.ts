@@ -1,11 +1,12 @@
-import { COLOR_NAMES } from './colors'
 import type { Context } from 'hono'
-import { FRAMES } from './frames'
+import { streamText } from 'hono/streaming'
+
 import { buildFrameOutput } from './buildFrameOutput'
+import { COLOR_NAMES } from './colors'
 import { flipFrame } from './flipFrame'
+import { FRAMES } from './frames'
 import { isCurlUserAgent } from './isCurlUserAgent'
 import { selectColor } from './selectColor'
-import { streamText } from 'hono/streaming'
 
 /**
  * Time each frame is shown for, in milliseconds. Matches parrot.live.
