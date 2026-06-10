@@ -3,25 +3,25 @@
  * Each value is the SGR escape sequence that switches on the named color.
  */
 export const ANSI_COLORS = {
-	blue: '\x1b[34m',
-	cyan: '\x1b[36m',
-	green: '\x1b[32m',
-	magenta: '\x1b[35m',
-	red: '\x1b[31m',
-	white: '\x1b[37m',
-	yellow: '\x1b[33m',
+  blue: '\x1b[34m',
+  cyan: '\x1b[36m',
+  green: '\x1b[32m',
+  magenta: '\x1b[35m',
+  red: '\x1b[31m',
+  white: '\x1b[37m',
+  yellow: '\x1b[33m',
 } as const
 
 export type ParrotColor = keyof typeof ANSI_COLORS
 
 export const COLOR_NAMES: readonly ParrotColor[] = [
-	'red',
-	'yellow',
-	'green',
-	'blue',
-	'magenta',
-	'cyan',
-	'white',
+  'red',
+  'yellow',
+  'green',
+  'blue',
+  'magenta',
+  'cyan',
+  'white',
 ]
 
 /**

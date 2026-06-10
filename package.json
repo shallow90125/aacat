@@ -1,33 +1,33 @@
 {
-	"name": "aacat",
-	"type": "module",
-	"scripts": {
-		"dev": "wrangler dev",
-		"deploy": "wrangler deploy --minify",
-		"cf-typegen": "wrangler types --env-interface CloudflareBindings",
-		"lint": "oxlint",
-		"lint:fix": "oxlint --fix",
-		"fmt": "oxfmt",
-		"fmt:check": "oxfmt --check",
-		"test": "vitest run",
-		"prepare": "husky || true"
-	},
-	"dependencies": {
-		"hono": "^4.12.19"
-	},
-	"devDependencies": {
-		"husky": "^9.1.7",
-		"lint-staged": "^17.0.4",
-		"oxfmt": "^0.50.0",
-		"oxlint": "^1.65.0",
-		"oxlint-tsgolint": "^0.23.0",
-		"vitest": "^4.1.6",
-		"wrangler": "^4.4.0"
-	},
-	"lint-staged": {
-		"*.{js,ts}": [
-			"bun run lint:fix",
-			"bun run fmt"
-		]
-	}
+  "name": "aacat",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "test": "vitest run",
+    "prepare": "husky || true"
+  },
+  "dependencies": {
+    "hono": "^4.12.19"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.4",
+    "oxfmt": "^0.50.0",
+    "oxlint": "^1.65.0",
+    "oxlint-tsgolint": "^0.23.0",
+    "vitest": "^4.1.6",
+    "wrangler": "^4.4.0"
+  },
+  "lint-staged": {
+    "*": [
+      "oxlint --fix --no-error-on-unmatched-pattern",
+      "oxfmt --no-error-on-unmatched-pattern"
+    ]
+  }
 }
