@@ -8,6 +8,6 @@ export default defineConfig({
   },
   test: {
     // Enables in-source testing: each `if (import.meta.vitest)` block in src/ is collected as tests.
-    includeSource: ['src/**/*.ts'],
+    includeSource: ['src/**/*.ts', 'scripts/**/*.ts'],
   },
 })
